@@ -53,3 +53,20 @@ Then it will ask you passphrase twice. Good to provide.
 
 ###### How to git clone with ssh on private git repository?
 
+* First copy your ssh key or certificate and pest to the git reposiroty site.
+> cat ~/.ssh/id_rsa.pub | clip
+
+* Now clone the new repository in your local.
+> ssh-agent bash -c 'ssh-add ~/.ssh/id_rsa; git clone \<git@git.ssh.url.git\>'
+
+* After mead your changes and addition of files and commite. To push your changes use.
+> git push -v origin master
+
+* If you get some error key not found need to turn on shh agent.
+> $ eval `ssh-agent -s`
+
+* If you using multipe keys need to remove and add required one.
+> $ ssh-add -D 
+
+* To list added one use
+> $ ssh-add -l
