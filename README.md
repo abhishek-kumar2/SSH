@@ -63,7 +63,7 @@ Then it will ask you passphrase twice. Good to provide.
 > git push -v origin master
 
 * If you get some error key not found need to turn on shh agent.
-> $ eval `ssh-agent -s`
+> $ eval \`ssh-agent -s\`
 
 * If you using multipe keys need to remove and add required one.
 > $ ssh-add -D 
